@@ -1,0 +1,80 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/portfolio/Navigation.astro';
+import ProjectHeader from '../../components/portfolio/ProjectHeader.astro';
+import ProjectChallenge from '../../components/portfolio/ProjectChallenge.astro';
+import ProjectStrategy from '../../components/portfolio/ProjectStrategy.astro';
+import ProjectImpact from '../../components/portfolio/ProjectImpact.astro';
+import ProjectNavigation from '../../components/portfolio/ProjectNavigation.astro';
+import ContactCTA from '../../components/portfolio/ContactCTA';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((entry, index) => ({
+    params: { id: entry.id },
+    props: { 
+        entry,
+        nextProject: projects[index + 1] || projects[0] // Loop back to first or handle null
+    },
+  }));
+}
+
+const { entry, nextProject } = Astro.props;
+const { Content } = await render(entry);
+const { 
+  title, 
+  impactPhrase, 
+  role, 
+  tools, 
+  year, 
+  heroImage, 
+  metrics, 
+  context, 
+  challenge,
+  solution,
+  storyImage,
+  highlightQuote,
+  strategy,
+  tech
+} = entry.data;
+---
+
+<BaseLayout 
+  title={`${title} | Case Study`}
+  description={impactPhrase}
+>
+  <Navbar />
+  
+  <article>
+    <ProjectHeader 
+      title={title}
+      impactPhrase={impactPhrase}
+      role={role}
+      tools={tools}
+      year={year}
+      heroImage={heroImage}
+    />
+
+    <ProjectChallenge 
+      context={context} 
+      challenge={challenge} 
+      solution={solution} 
+      storyImage={storyImage}
+      highlightQuote={highlightQuote}
+    >
+      <Content />
+    </ProjectChallenge>
+
+    <ProjectStrategy strategy={strategy} tech={tech} />
+
+    <ProjectImpact metrics={metrics} />
+
+    <ProjectNavigation 
+      nextId={nextProject?.id}
+      nextTitle={nextProject?.data.title}
+    />
+  </article>
+
+  <ContactCTA />
+</BaseLayout>

@@ -11,23 +11,29 @@ const navItems = [
 ];
 ---
 
-<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+<header
+  class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+>
   <div class="container flex h-14 items-center justify-between mx-auto px-4">
     <div class="mr-4 flex">
       <a href="/" class="mr-6 flex items-center space-x-2">
-        <span class="inline-block font-bold text-xl ring-offset-background transition-colors hover:text-primary">
-          AstroStarter
+        <span
+          class="inline-block font-bold text-xl ring-offset-background transition-colors hover:text-primary"
+        >
+          Jean Pierre Salguero
         </span>
       </a>
       <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-        {navItems.map(item => (
-          <a
-            href={item.href}
-            class="transition-colors hover:text-foreground/80 text-foreground/60"
-          >
-            {item.label}
-          </a>
-        ))}
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              {item.label}
+            </a>
+          ))
+        }
       </nav>
     </div>
     <div class="flex flex-1 items-center justify-end space-x-2">

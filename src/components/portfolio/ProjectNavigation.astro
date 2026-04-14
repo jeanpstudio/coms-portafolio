@@ -1,0 +1,43 @@
+---
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+
+interface Props {
+  nextId?: string;
+  nextTitle?: string;
+}
+
+const { nextId, nextTitle } = Astro.props;
+---
+
+<section class="py-24 border-t border-border">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+      <!-- Volver -->
+      <a 
+        href="/" 
+        class="group flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <div class="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all">
+          <ArrowLeft className="w-5 h-5" />
+        </div>
+        Volver al Inicio
+      </a>
+
+      <!-- Siguiente -->
+      {nextId && (
+        <a 
+          href={`/projects/${nextId}`} 
+          class="group flex flex-col items-end text-right"
+        >
+          <span class="text-xs uppercase tracking-widest text-muted-foreground font-bold mb-2">Siguiente Proyecto</span>
+          <div class="flex items-center gap-6">
+            <h3 class="text-3xl md:text-5xl font-black group-hover:text-primary transition-colors">{nextTitle}</h3>
+            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center group-hover:scale-110 transition-all">
+              <ArrowRight className="w-8 h-8" />
+            </div>
+          </div>
+        </a>
+      )}
+    </div>
+  </div>
+</section>

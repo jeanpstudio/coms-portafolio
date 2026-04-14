@@ -1,0 +1,56 @@
+---
+/**
+ * COMPONENTE: ProjectHeader
+ * Renderiza el título, la frase de impacto y la ficha técnica del proyecto.
+ * 🟢 PARA EDITAR: Los textos dinámicos provienen del archivo .mdx de cada proyecto.
+ * 🟢 RESPONSIVE: Utiliza 'text-4xl' para móviles y 'md:text-7xl' para pantallas grandes.
+ */
+interface Props {
+  title: string;
+  impactPhrase: string;
+  role: string;
+  tools: string[];
+  year: string;
+  heroImage: string;
+}
+
+const { title, impactPhrase, role, tools, year, heroImage } = Astro.props;
+---
+
+<header class="relative w-full pt-32 pb-16 overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6 relative z-10">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-6">{title}</h1>
+        <!-- 🟢 EDITAR: La frase de impacto se puede cambiar en el frontmatter del .mdx -->
+        <p class="text-xl md:text-2xl text-muted-foreground italic">
+        "{impactPhrase}"
+      </p>
+    </div>
+
+    <!-- Ficha Técnica -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-border mb-16">
+      <div>
+        <h4 class="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-black mb-2">Role</h4>
+        <p class="font-bold text-foreground">{role}</p>
+      </div>
+      <div class="md:col-span-2">
+        <h4 class="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-black mb-2">Tools & Expertise</h4>
+        <p class="font-bold text-foreground">{tools.join(', ')}</p>
+      </div>
+      <div>
+        <h4 class="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-black mb-2">Year</h4>
+        <p class="font-bold text-foreground">{year}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full h-[60vh] md:h-[80vh] px-4 md:px-6">
+    <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl">
+      <img 
+        src={heroImage} 
+        alt={title} 
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</header>
