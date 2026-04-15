@@ -50,28 +50,28 @@ export default function HybridSkills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
               <div
                 key={index}
-                className="group relative p-8 rounded-2xl bg-card border border-border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="group relative p-8 rounded-2xl bg-card border border-border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col h-full text-center md:text-left"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 mx-auto md:mx-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 mx-auto md:mx-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
                   <Icon className="w-7 h-7" />
                 </div>
 
                 <h3 className="text-2xl font-bold mb-3">{skill.title}</h3>
-                <p className="text-muted-foreground mb-6 h-20">
+                <p className="text-muted-foreground mb-6 flex-grow">
                   {skill.description}
                 </p>
 
-                <ul className="space-y-3">
+                <ul className="space-y-3 pt-4 border-t border-border/50">
                   {skill.bullets.map((bullet, idx) => (
-                    <li key={idx} className="flex items-center justify-center md:justify-start font-medium text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
-                      {bullet}
+                    <li key={idx} className="flex items-start justify-center md:justify-start font-medium text-sm leading-tight text-zinc-500">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 mr-3 shrink-0" />
+                      <span>{bullet}</span>
                     </li>
                   ))}
                 </ul>

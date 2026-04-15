@@ -7,7 +7,7 @@ const fieldItems = [
     title: 'High-Altitude Documentary',
     subtitle: 'Producing 4K cinematic content at 14,700 ft (4,500 masl). Expert in ultralight Sony Alpha configurations for extreme vertical logistics.',
     tag: 'High Mountain',
-    image: 'https://images.unsplash.com/photo-1519060592966-22a84b065dc2?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://res.cloudinary.com/dyiighsvd/image/upload/q_auto/f_auto/v1776240422/DSC02576_wvrc6h.jpg',
     type: 'image',
     gridClass: 'md:col-span-2 md:row-span-2'
   },
@@ -16,7 +16,7 @@ const fieldItems = [
     title: 'Glacial & Paramo Expeditions',
     subtitle: 'Documenting the frontline of climate change in water-source ecosystems and high-altitude wetlands.',
     tag: 'Ecosystems',
-    image: 'https://images.unsplash.com/photo-1627407077677-3e818816fa8c?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dyiighsvd/image/upload/q_auto/f_auto/v1776241044/IMG_3981_bipuex.jpg',
     type: 'image',
     gridClass: 'md:col-span-2 md:row-span-1'
   },
@@ -25,7 +25,7 @@ const fieldItems = [
     title: 'Community Engagement',
     subtitle: 'Documenting ancestral knowledge with a sensitive, human-centric approach. Building trust in frontline communities.',
     tag: 'Social Impact',
-    image: 'https://images.unsplash.com/photo-1542382103-3aed36612d5d?auto=format&fit=crop&q=80&w=600',
+    image: 'https://res.cloudinary.com/dyiighsvd/image/upload/q_auto/f_auto/v1776241464/DSC00669_jc3vpo.jpg',
     type: 'image',
     gridClass: 'md:col-span-1 md:row-span-1'
   },
@@ -34,7 +34,8 @@ const fieldItems = [
     title: 'Off-grid Production Hub',
     subtitle: '4K Production + Drone operations in zero-connectivity zones. Delivering broadcast-quality assets from the heart of the Andes.',
     tag: 'Tech',
-    type: 'special', // Green card
+    image: 'https://res.cloudinary.com/dyiighsvd/image/upload/q_auto/f_auto/v1776241377/DSC00566_emonum.jpg',
+    type: 'image',
     gridClass: 'md:col-span-1 md:row-span-1'
   }
 ];
@@ -62,7 +63,7 @@ export default function FieldGallery() {
             <p className="mt-4 text-lg text-muted-foreground uppercase text-xs font-bold tracking-widest">
               Delivering premium visual assets under the most challenging high-altitude conditions.
             </p>
-            
+
             {/* 🟢 EDITAR: Ubicación destacada */}
             <div className="mt-6 flex items-center justify-center text-[10px] font-black uppercase tracking-[0.2em] text-primary">
               <MapPin className="w-3 h-3 mr-2" />

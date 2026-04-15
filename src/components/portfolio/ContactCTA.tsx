@@ -37,31 +37,87 @@ export default function ContactCTA() {
             Looking for a strategic partner to bridge high-altitude field operations with world-class digital performance? Reach out to start the conversation.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+          <form
+            action="https://formspree.io/f/meevejeg"
+            method="POST"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 text-left"
+          >
+            <div className="space-y-2">
+              <label htmlFor="name" className="text-sm font-bold uppercase tracking-wider text-zinc-400">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your name"
+                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="email" className="text-sm font-bold uppercase tracking-wider text-zinc-400">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+              />
+            </div>
+
+            <div className="md:col-span-2 space-y-2">
+              <label htmlFor="message" className="text-sm font-bold uppercase tracking-wider text-zinc-400">
+                Your Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                placeholder="How can we collaborate?"
+                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
+              />
+            </div>
+
+            <div className="md:col-span-2 pt-4">
+              <button
+                type="submit"
+                className="w-full inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-[1.01] active:scale-[0.99]"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-12">
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/jeanpstudio"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-[#0077b5] px-8 py-4 text-sm font-black uppercase tracking-widest text-white shadow-lg transition-all hover:bg-[#0077b5]/90 hover:scale-[1.02] active:scale-[0.98]"
+              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest"
             >
-              <LinkedinIcon className="mr-2 h-5 w-5" />
-              Connect on LinkedIn
+              <LinkedinIcon className="h-5 w-5" />
+              LinkedIn
             </a>
-
             <a
               href="/resume"
               target="_blank"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-md border-2 border-zinc-700 bg-transparent px-8 py-4 text-sm font-black uppercase tracking-widest text-white shadow-sm transition-colors hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-foreground"
+              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest"
             >
-              <FileText className="mr-2 h-5 w-5" />
-              Download Professional Resume
+              <FileText className="h-5 w-5" />
+              Resume
             </a>
-          </div>
-
-          <div className="pt-16 mt-16 border-t border-zinc-800">
-            <a className="text-zinc-500 flex items-center justify-center text-sm">
-              <Mail className="w-4 h-4 mr-2" />
-              admin@jeanpstudio.com
+            <a
+              href="mailto:admin@jeanpstudio.com"
+              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest"
+            >
+              <Mail className="h-5 w-5" />
+              Email
             </a>
           </div>
         </div>

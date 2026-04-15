@@ -1,6 +1,39 @@
 import React from 'react';
 import { ArrowRight, Globe } from 'lucide-react';
 
+const LinkedInIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const GitHubIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
 export default function Hero() {
   // ==========================================
   // CONFIGURACIÓN DE FONDO (Hero Background)
@@ -24,7 +57,7 @@ export default function Hero() {
       {bgType === 'image' && (
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2000"
+            src="https://res.cloudinary.com/dyiighsvd/image/upload/q_auto/f_auto/v1776238037/DSC02564_bgyl5o.jpg"
             alt="Andes Background"
             className="w-full h-full object-cover opacity-90"
           />
@@ -69,7 +102,7 @@ export default function Hero() {
           <h1 className={`text-4xl md:text-7xl font-extrabold tracking-tight leading-[1.1] ${headingColor}`}>
             Driving Global Narratives{' '}
             <span className={`${hasMediaBg ? 'text-emerald-400 drop-shadow-sm' : 'text-primary'} relative inline`}>
-              <span className={`relative z-10 break-words ${hasMediaBg ? 'bg-black/30 border border-emerald-500/20 px-2 py-0.5 rounded backdrop-blur-md' : 'bg-gradient-to-t from-primary/20 to-transparent bg-[length:100%_40%] bg-bottom bg-no-repeat'}`}>
+              <span className={`relative z-10 break-words`}>
                 for Ecosystem Restoration & Social Impact
               </span>
             </span>
@@ -80,48 +113,47 @@ export default function Hero() {
             <span className={`font-semibold ${headingColor}`}>Communications Lead & Multimedia Specialist.</span> I bridge the gap between high-altitude field storytelling and modern technical execution. Based in the Andes, working for the world.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
-            <a
-              href="#casos"
-              className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98]"
-            >
-              View My Work
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <a
-              href="/resume"
-              className={`inline-flex items-center justify-center rounded-md border px-8 py-4 text-sm font-medium shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${hasMediaBg
-                ? 'border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-md'
-                : 'border-border bg-background text-foreground hover:bg-muted'
-                }`}
-              target='blank'
-            >
-              Download CV
-            </a>
-            <a
-              href="https://github.com/jeanpstudio"
-              className={`inline-flex items-center justify-center rounded-md border px-8 py-4 text-sm font-medium shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:scale-[1.02] active:scale-[0.98] ${hasMediaBg
-                ? 'border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-md'
-                : 'border-border bg-background text-foreground hover:bg-muted'
-                }`}
-              target='_blank'
-              rel="noopener noreferrer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mr-2 h-4 w-4"
+          <div className="flex flex-col gap-8 mt-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <a
+                href="#casos"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98]"
               >
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-              GitHub
-            </a>
+                View My Work
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+              <a
+                href="/resume"
+                className={`inline-flex items-center justify-center rounded-md border px-8 py-4 text-sm font-medium shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${hasMediaBg
+                  ? 'border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-md'
+                  : 'border-border bg-background text-foreground hover:bg-muted'
+                  }`}
+                target='blank'
+              >
+                Download CV
+              </a>
+            </div>
+
+            <div className="flex items-center gap-6 pt-2">
+              <a
+                href="https://linkedin.com/in/jeanpstudio"
+                className={`transition-all hover:scale-110 active:scale-95 ${hasMediaBg ? 'text-white/60 hover:text-white' : 'text-muted-foreground hover:text-primary'}`}
+                target='_blank'
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon className="h-6 w-6" />
+              </a>
+              <a
+                href="https://github.com/jeanpstudio"
+                className={`transition-all hover:scale-110 active:scale-95 ${hasMediaBg ? 'text-white/60 hover:text-white' : 'text-muted-foreground hover:text-primary'}`}
+                target='_blank'
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <GitHubIcon className="h-6 w-6" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -131,7 +163,7 @@ export default function Hero() {
       {hasMediaBg && (
         <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-20 text-white/60 text-[10px] md:text-xs font-light tracking-widest uppercase flex items-center gap-2 backdrop-blur-sm bg-black/10 px-3 py-1.5 rounded border border-white/10 hover:text-white/90 transition-colors cursor-default">
           <span className="w-3 h-px bg-emerald-500/80"></span>
-          {bgType === 'video' ? 'Cinematography' : 'Photography'} & Creative Direction by JP Studio
+          {bgType === 'video' ? 'Cinematography' : 'Photography'} & Creative Direction by Jean Pierre Salguero
         </div>
       )}
 

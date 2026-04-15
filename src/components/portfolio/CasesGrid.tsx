@@ -17,7 +17,7 @@ const cases = [
     problem: 'Critical lack of oversight for multi-country campaigns and partner deliverables. The organization needed a centralized way to track storytelling, mailing, and task completion across 5 countries.',
     solution: 'Engineered a custom Administration Dashboard to centralize operations. I architected a full oversight system for partner products, storytelling pipelines, and mailing campaigns, aligning it with a regional DAM (Digital Asset Management).',
     result: 'Transitioned from fragmented tracking to 100% operational transparency, enabling real-time supervision of all regional communication products.',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200'
+    image: 'https://res.cloudinary.com/dyiighsvd/image/upload/q_auto/f_auto/v1776233896/featured-dashboard_nkl8id.jpg'
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const cases = [
     problem: 'Managing high-stakes global recognition (UN & Earthshot Prize) while maintaining a consistent visual narrative across 5 countries and multiple languages.',
     solution: 'Led the creative direction for international documentary series and PR campaigns, coordinating external agencies and field teams to deliver real-time content for global audiences.',
     result: 'Successfully synchronized global launches for UN Flagship and Earthshot Prize, achieving worldwide media coverage and multi-channel engagement.',
-    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1200'
+    image: 'https://res.cloudinary.com/dyiighsvd/image/upload/q_auto/f_auto/v1776236162/L1020003_j95khe_f297d7.jpg'
   },
   {
     id: 3,

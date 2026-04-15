@@ -19,7 +19,7 @@ const HybridProfile = () => {
           <div className="md:col-span-5 order-2 md:order-1">
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl group">
               <img
-                src="/Users/jeanpstudio/.gemini/antigravity/brain/45f36045-621b-4e73-bb63-24cc13342492/jean_pierre_andes_field_1776200819802.png"
+                src="https://res.cloudinary.com/dyiighsvd/image/upload/q_auto/f_auto/v1776235981/518400297_4119971268246978_6422889270926759859_n_xy1fji.jpg"
                 alt="Jean Pierre Salguero in the field"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
@@ -28,8 +28,8 @@ const HybridProfile = () => {
           </div>
 
           {/* Columna de Texto */}
-          <div className="md:col-span-7 order-1 md:order-2 flex flex-col justify-center text-center md:text-left">
-            <div className="space-y-6 md:space-y-8 text-lg md:text-xl text-muted-foreground leading-relaxed font-medium max-w-2xl mx-auto md:mx-0 italic break-words">
+          <div className="md:col-span-7 order-1 md:order-2 flex flex-col justify-center">
+            <div className="space-y-6 md:space-y-8 text-lg md:text-xl text-muted-foreground leading-relaxed font-medium italic hyphens-auto">
               <p>
                 With over a decade of experience at the intersection of communication, technology, and social impact,
                 I have dedicated my career to amplifying the voices of those protecting our planet’s most vital ecosystems.
