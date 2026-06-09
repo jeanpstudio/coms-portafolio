@@ -41,7 +41,7 @@ export default function Hero() {
   // 'image' -> Muestra una foto de fondo
   // 'video' -> Muestra un video en loop
   // 'color' -> Muestra el fondo simple (claro/oscuro según el tema)
-  const bgType: 'color' | 'image' | 'video' = 'image';
+  const bgType = 'image' as 'color' | 'image' | 'video';
   // ==========================================
 
   // Clases dinámicas: Si es foto o video, forzamos textos blancos y superponemos una sombra
