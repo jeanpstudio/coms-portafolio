@@ -53,15 +53,15 @@ export default function CasesGrid() {
     <section id="casos" className="py-24 bg-muted/30">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center text-center mb-24">
-          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-foreground">Success Stories</h2>
-          <p className="mt-4 max-w-2xl text-lg text-muted-foreground uppercase text-xs font-bold tracking-widest">
+          <h2 className="text-h2 font-extrabold tracking-tight text-title">Success Stories</h2>
+          <p className="mt-4 max-w-2xl text-lg text-subtitle uppercase text-xs font-bold tracking-widest">
             Scaling impact through technology, narrative strategy, and field expertise.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {cases.map((c) => (
-            <div key={c.id} className="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-border shadow-sm hover:shadow-2xl transition-all duration-500">
+            <div key={c.id} className="group relative flex flex-col overflow-hidden rounded-img bg-white border border-border shadow-sm hover:shadow-2xl transition-all duration-500">
               <div className="h-64 overflow-hidden relative">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-all duration-700 z-10" />
                 <img
@@ -70,7 +70,7 @@ export default function CasesGrid() {
                   className="w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-700"
                 />
                 <div className="absolute bottom-6 left-6 z-20">
-                  <h3 className="text-3xl font-black text-white uppercase tracking-tighter leading-none">{c.project}</h3>
+                  <h3 className="text-h3 font-black text-title-darkbg uppercase tracking-tighter leading-none">{c.project}</h3>
                 </div>
               </div>
 
@@ -81,7 +81,7 @@ export default function CasesGrid() {
                       <Target className="w-4 h-4 mr-2" />
                       <span>01. The Problem</span>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed font-medium">{c.problem}</p>
+                    <p className="text-p-body text-subtitle leading-relaxed font-medium">{c.problem}</p>
                   </div>
 
                   <div>
@@ -89,7 +89,7 @@ export default function CasesGrid() {
                       <Lightbulb className="w-4 h-4 mr-2" />
                       <span>02. The Solution</span>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed font-medium">{c.solution}</p>
+                    <p className="text-p-body text-subtitle leading-relaxed font-medium">{c.solution}</p>
                   </div>
 
                   <div className="pt-6 border-t border-zinc-100">
@@ -97,7 +97,7 @@ export default function CasesGrid() {
                       <TrendingUp className="w-4 h-4 mr-2" />
                       <span>03. The Result</span>
                     </div>
-                    <p className="text-foreground font-bold text-sm leading-tight italic">"{c.result}"</p>
+                    <p className="text-p-body text-title font-bold leading-tight italic">"{c.result}"</p>
                   </div>
                 </div>
 

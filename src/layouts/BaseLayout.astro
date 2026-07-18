@@ -24,7 +24,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/fav.svg" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- SEO Meta Tags -->
@@ -46,12 +46,14 @@ const {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+    <!-- DESIGN_SYSTEM_FONTS_START -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- DESIGN_SYSTEM_FONTS_END -->
   </head>
   <body
     class="min-h-screen bg-background font-sans antialiased text-foreground"
@@ -64,8 +66,10 @@ const {
 
 <style is:global>
   :root {
+    /* DESIGN_SYSTEM_VARIABLES_START */
     --font-sans: "Inter", system-ui, -apple-system, sans-serif;
     --font-heading: "Montserrat", var(--font-sans);
+    /* DESIGN_SYSTEM_VARIABLES_END */
   }
 
   html {

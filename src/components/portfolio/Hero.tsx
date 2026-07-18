@@ -46,8 +46,8 @@ export default function Hero() {
 
   // Clases dinámicas: Si es foto o video, forzamos textos blancos y superponemos una sombra
   const hasMediaBg = bgType === 'image' || bgType === 'video';
-  const headingColor = hasMediaBg ? 'text-white' : 'text-foreground';
-  const paragraphColor = hasMediaBg ? 'text-zinc-200' : 'text-muted-foreground';
+  const headingColor = hasMediaBg ? 'text-title-darkbg' : 'text-title';
+  const paragraphColor = hasMediaBg ? 'text-subtitle-darkbg' : 'text-subtitle';
   const badgeBg = hasMediaBg ? 'bg-black/30 border-white/20 text-white' : 'bg-primary/5 border-primary/20 text-primary';
 
   return (
@@ -99,7 +99,7 @@ export default function Hero() {
           </div>
 
           {/* 🟢 EDITAR: Título principal de la web */}
-          <h1 className={`text-4xl md:text-7xl font-extrabold tracking-tight leading-[1.1] ${headingColor}`}>
+          <h1 className={`text-h1 font-extrabold tracking-tight leading-[1.1] ${headingColor}`}>
             Driving Global Narratives{' '}
             <span className={`${hasMediaBg ? 'text-emerald-400 drop-shadow-sm' : 'text-primary'} relative inline`}>
               <span className={`relative z-10 break-words`}>
@@ -109,7 +109,7 @@ export default function Hero() {
           </h1>
 
           {/* 🟢 EDITAR: Descripción corta (Bio) */}
-          <p className={`mt-4 text-xl md:text-2xl max-w-2xl font-medium leading-relaxed ${paragraphColor}`}>
+          <p className={`mt-4 text-p-lead max-w-2xl font-medium leading-relaxed ${paragraphColor}`}>
             <span className={`font-semibold ${headingColor}`}>Communications Lead & Multimedia Specialist.</span> I bridge the gap between high-altitude field storytelling and modern technical execution. Based in the Andes, working for the world.
           </p>
 

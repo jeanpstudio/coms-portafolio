@@ -1,82 +1,87 @@
 @import "tailwindcss";
 
 @theme {
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
 
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
 
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
 
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
 
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
 
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-title: var(--text-title);
+  --color-subtitle: var(--text-subtitle);
+  --color-title-darkbg: var(--text-title-dark-bg);
+  --color-subtitle-darkbg: var(--text-subtitle-dark-bg);
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+  --radius-img: var(--image-radius);
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 20%;
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 20%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 20%;
-    --primary: 145 60% 25%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 215 15% 95%;
-    --secondary-foreground: 145 60% 15%;
-    --muted: 215 15% 95%;
-    --muted-foreground: 215 20% 45%;
-    --accent: 145 60% 25%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 215 15% 90%;
-    --input: 215 15% 90%;
-    --ring: 145 60% 25%;
+    /* DESIGN_SYSTEM_LIGHT_START */
+    --background: #ffffff;
+    --foreground: #242f3d;
+    --card: #ffffff;
+    --card-foreground: #242f3d;
+    --popover: #ffffff;
+    --popover-foreground: #242f3d;
+    --primary: #166534;
+    --primary-foreground: #ffffff;
+    --secondary: #f1f3f5;
+    --secondary-foreground: #0d3a1e;
+    --muted: #f1f3f5;
+    --muted-foreground: #5c6e80;
+    --accent: #166534;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #166534;
     --radius: 0.5rem;
-  }
 
-  .dark {
-    --background: 215 25% 10%;
-    --foreground: 0 0% 98%;
-    --card: 215 25% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 215 25% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 145 50% 45%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 215 25% 18%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 215 25% 18%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 145 50% 45%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 215 25% 18%;
-    --input: 215 25% 18%;
-    --ring: 145 50% 45%;
+    /* Custom Design System Tokens */
+    --text-title: #242f3d;
+    --text-subtitle: #5c6e80;
+    --text-title-dark-bg: #ffffff;
+    --text-subtitle-dark-bg: #dcdcdc;
+    --image-radius: 2.5rem;
+    --size-h1-mobile: 2.25rem;
+    --size-h1-desktop: 4.5rem;
+    --size-h2-mobile: 1.875rem;
+    --size-h2-desktop: 3rem;
+    --size-h3-mobile: 1.5rem;
+    --size-h3-desktop: 1.875rem;
+    --size-h4-mobile: 1.25rem;
+    --size-h4-desktop: 1.25rem;
+    --size-p-lead-mobile: 1.125rem;
+    --size-p-lead-desktop: 1.25rem;
+    --size-p-body: 1rem;
+    --size-p-sm: 0.875rem;
+    /* DESIGN_SYSTEM_LIGHT_END */
   }
 }
 
@@ -87,4 +92,48 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Utilities for responsive heading sizes from CSS variables */
+@utility text-h1 {
+  font-size: var(--size-h1-mobile);
+  @media (min-width: 768px) {
+    font-size: var(--size-h1-desktop);
+  }
+}
+
+@utility text-h2 {
+  font-size: var(--size-h2-mobile);
+  @media (min-width: 768px) {
+    font-size: var(--size-h2-desktop);
+  }
+}
+
+@utility text-h3 {
+  font-size: var(--size-h3-mobile);
+  @media (min-width: 768px) {
+    font-size: var(--size-h3-desktop);
+  }
+}
+
+@utility text-h4 {
+  font-size: var(--size-h4-mobile);
+  @media (min-width: 768px) {
+    font-size: var(--size-h4-desktop);
+  }
+}
+
+@utility text-p-lead {
+  font-size: var(--size-p-lead-mobile);
+  @media (min-width: 768px) {
+    font-size: var(--size-p-lead-desktop);
+  }
+}
+
+@utility text-p-body {
+  font-size: var(--size-p-body);
+}
+
+@utility text-p-sm {
+  font-size: var(--size-p-sm);
 }

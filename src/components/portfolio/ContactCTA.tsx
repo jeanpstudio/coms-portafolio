@@ -29,11 +29,11 @@ export default function ContactCTA() {
       <div className="container px-4 md:px-6 mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* 🟢 EDITAR: Título de la llamada a la acción final */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
+          <h2 className="text-h2 font-extrabold tracking-tight text-title-darkbg mb-6">
             Let’s build the next global narrative together.
           </h2>
           {/* 🟢 EDITAR: Descripción del CTA */}
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-10 font-medium">
+          <p className="text-p-lead text-subtitle-darkbg max-w-2xl mx-auto mb-10 font-medium">
             Looking for a strategic partner to bridge high-altitude field operations with world-class digital performance? Reach out to start the conversation.
           </p>
 

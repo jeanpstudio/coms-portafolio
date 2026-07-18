@@ -35,8 +35,8 @@ const formatSolution = (text: string) => {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
           </div>
-          <h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground mb-3">01. The Context</h3>
-          <p class="text-xl text-foreground font-medium leading-relaxed tracking-tight">
+          <h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-subtitle mb-3">01. The Context</h3>
+          <p class="text-p-body text-title font-medium leading-relaxed tracking-tight">
             {context}
           </p>
         </div>
@@ -49,7 +49,7 @@ const formatSolution = (text: string) => {
             </svg>
           </div>
           <h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-3">02. The Challenge</h3>
-          <p class="text-xl text-foreground font-medium leading-relaxed tracking-tight">
+          <p class="text-p-body text-title font-medium leading-relaxed tracking-tight">
             {challenge}
           </p>
         </div>
@@ -62,7 +62,7 @@ const formatSolution = (text: string) => {
             </svg>
           </div>
           <h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-3">03. The Solution</h3>
-          <div class="text-xl text-foreground font-medium leading-relaxed tracking-tight prose-simple">
+          <div class="text-p-body text-title font-medium leading-relaxed tracking-tight prose-simple">
             {solution ? (
               <Fragment set:html={formatSolution(solution)} />
             ) : (
@@ -73,14 +73,14 @@ const formatSolution = (text: string) => {
       </div>
 
       <div class="relative group mt-12 md:mt-0">
-        <div class="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-muted shadow-2xl">
+        <div class="aspect-[4/5] rounded-img overflow-hidden bg-muted shadow-2xl">
           <img 
             src={storyImage} 
             alt="Contexto ambiental" 
             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
           />
         </div>
-        <div class="absolute -bottom-10 -left-10 bg-foreground text-background p-10 rounded-[2rem] shadow-2xl max-w-xs hidden lg:block border border-white/10 backdrop-blur-md">
+        <div class="absolute -bottom-10 -left-10 bg-foreground text-title-darkbg p-10 rounded-img shadow-2xl max-w-xs hidden lg:block border border-white/10 backdrop-blur-md">
           <!-- 🟢 EDITAR: Frase destacada sobre el contexto/desafío -->
           <p class="text-lg font-bold leading-tight uppercase tracking-tighter">
             "{highlightQuote}"

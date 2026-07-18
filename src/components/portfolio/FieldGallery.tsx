@@ -58,9 +58,9 @@ export default function FieldGallery() {
         <div className="flex flex-col items-center justify-center text-center mb-16">
           <div className="max-w-3xl">
             {/* 🟢 EDITAR: Título de la sección de la galería de campo */}
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">High Andean Range & Remote Highlands</h2>
+            <h2 className="text-h2 font-extrabold tracking-tight text-title">High Andean Range & Remote Highlands</h2>
             {/* 🟢 EDITAR: Descripción de la experiencia en campo */}
-            <p className="mt-4 text-lg text-muted-foreground uppercase text-xs font-bold tracking-widest">
+            <p className="mt-4 text-lg text-subtitle uppercase text-xs font-bold tracking-widest">
               Delivering premium visual assets under the most challenging high-altitude conditions.
             </p>
 
@@ -80,12 +80,12 @@ export default function FieldGallery() {
                 <div
                   key={item.id}
                   onClick={() => setSelectedItem(item)}
-                  className={`group relative overflow-hidden rounded-[2rem] bg-primary p-8 flex flex-col justify-end shadow-sm cursor-pointer hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${item.gridClass}`}
+                  className={`group relative overflow-hidden rounded-img bg-primary p-8 flex flex-col justify-end shadow-sm cursor-pointer hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${item.gridClass}`}
                 >
                   <div className="h-full flex flex-col justify-between relative z-20 text-primary-foreground">
                     <Zap className="w-10 h-10 opacity-80" />
                     <div>
-                      <h3 className="text-xl font-black uppercase tracking-tighter mb-2">{item.title}</h3>
+                      <h3 className="text-h3 font-black uppercase tracking-tighter text-title-darkbg mb-2">{item.title}</h3>
                       <p className="text-primary-foreground/80 text-sm font-medium">{item.subtitle}</p>
                     </div>
                   </div>
@@ -98,7 +98,7 @@ export default function FieldGallery() {
               <div
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
-                className={`group relative overflow-hidden rounded-[2rem] shadow-sm cursor-pointer hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${item.gridClass}`}
+                className={`group relative overflow-hidden rounded-img shadow-sm cursor-pointer hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${item.gridClass}`}
               >
                 {/* Visual Overlay for legibility */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
@@ -115,11 +115,11 @@ export default function FieldGallery() {
                       {item.tag}
                     </span>
                   )}
-                  <h3 className={`font-black uppercase tracking-tighter text-white ${item.id === 'andes' ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
+                  <h3 className={`font-black uppercase tracking-tighter text-title-darkbg text-h3`}>
                     {item.title}
                   </h3>
                   {item.id === 'andes' && (
-                    <p className="text-white/80 mt-2 max-w-sm text-sm font-medium line-clamp-2">
+                    <p className="text-subtitle-darkbg mt-2 max-w-sm text-p-sm font-medium line-clamp-2">
                       {item.subtitle}
                     </p>
                   )}
@@ -141,7 +141,7 @@ export default function FieldGallery() {
             onClick={() => setSelectedItem(null)}
           />
 
-          <div className="relative w-full max-w-6xl aspect-video md:aspect-auto md:max-h-[85vh] bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl z-20 flex flex-col">
+          <div className="relative w-full max-w-6xl aspect-video md:aspect-auto md:max-h-[85vh] bg-zinc-900 rounded-img overflow-hidden shadow-2xl z-20 flex flex-col">
             {/* Modal Header/Close */}
             <button
               onClick={() => setSelectedItem(null)}
@@ -173,8 +173,8 @@ export default function FieldGallery() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div>
                   <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2 block">{selectedItem.tag || 'Field Expertise'}</span>
-                  <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white">{selectedItem.title}</h2>
-                  <p className="text-zinc-400 mt-2 max-w-3xl font-medium">{selectedItem.subtitle}</p>
+                  <h2 className="text-h2 font-extrabold tracking-tight text-title-darkbg">{selectedItem.title}</h2>
+                  <p className="text-p-body text-subtitle-darkbg mt-2 max-w-3xl font-medium">{selectedItem.subtitle}</p>
                 </div>
                 {selectedItem.type !== 'special' && (
                   <div className="flex gap-4">
