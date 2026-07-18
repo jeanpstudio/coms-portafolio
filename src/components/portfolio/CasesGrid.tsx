@@ -93,7 +93,7 @@ export default function CasesGrid() {
                   </div>
 
                   <div className="pt-6 border-t border-zinc-100">
-                    <div className="flex items-center text-emerald-600 font-bold mb-3 uppercase text-[10px] tracking-[0.2em]">
+                    <div className="flex items-center text-primary font-bold mb-3 uppercase text-[10px] tracking-[0.2em]">
                       <TrendingUp className="w-4 h-4 mr-2" />
                       <span>03. The Result</span>
                     </div>

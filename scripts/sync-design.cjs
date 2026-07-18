@@ -129,6 +129,7 @@ function syncDesign() {
     --text-subtitle: ${c["text-subtitle"] || "215 20% 45%"};
     --text-title-dark-bg: ${c["text-title-dark-bg"] || "0 0% 100%"};
     --text-subtitle-dark-bg: ${c["text-subtitle-dark-bg"] || "240 5% 84%"};
+    --text-highlight-dark-bg: ${c["text-highlight-dark-bg"] || "#34d399"};
     --image-radius: ${tokens.imageRadius};
     --size-h1-mobile: ${h["h1-mobile"]};
     --size-h1-desktop: ${h["h1-desktop"]};

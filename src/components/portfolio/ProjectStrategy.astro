@@ -78,7 +78,7 @@ const {
             </div>
           )}
         </div>
-        <div class="h-1/2 rounded-img overflow-hidden shadow-lg bg-emerald-900 flex items-center justify-center p-8 text-white text-center">
+        <div class="h-1/2 rounded-img overflow-hidden shadow-lg bg-primary flex items-center justify-center p-8 text-white text-center">
             <div>
               <p class="text-lg font-medium italic">"{strategy.galleryQuote}"</p>
             </div>
@@ -96,7 +96,7 @@ const {
       
       <div class="max-w-5xl relative z-10">
         <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/20 mb-8">
-          <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+          <div class="w-2 h-2 rounded-full bg-highlight-darkbg"></div>
           <span class="text-xs font-bold uppercase tracking-widest text-white/60">Technical Implementation</span>
         </div>
         <div class="mb-12">
@@ -109,7 +109,7 @@ const {
             <ul class="space-y-10">
                 {tech.features?.map((feature, index) => (
                 <li class="flex items-start gap-6 group/item">
-                    <div class="w-12 h-12 rounded-md bg-white/5 flex items-center justify-center text-emerald-400 flex-shrink-0 group-hover/item:bg-emerald-400 group-hover/item:text-black transition-all duration-500 border border-white/10">
+                    <div class="w-12 h-12 rounded-md bg-white/5 flex items-center justify-center text-highlight-darkbg flex-shrink-0 group-hover/item:bg-highlight-darkbg group-hover/item:text-black transition-all duration-500 border border-white/10">
                     <span class="font-black text-lg">0{index + 1}</span>
                     </div>
                     <div>
@@ -123,13 +123,13 @@ const {
           
           <div class="md:col-span-5">
             <div class="bg-white/5 rounded-img p-10 border border-white/10 backdrop-blur-xl relative group h-full flex flex-col justify-center">
-                <div class="absolute -top-4 -left-4 w-12 h-12 bg-emerald-500 flex items-center justify-center rounded-2xl text-black rotate-[-10deg] group-hover:rotate-0 transition-transform duration-500">
+                <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary flex items-center justify-center rounded-2xl text-black rotate-[-10deg] group-hover:rotate-0 transition-transform duration-500">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 13.1216 16 12.017 16H9.01703V21H14.017ZM14.017 21H19.017V16H16.017C14.9124 16 14.017 16.8954 14.017 18V21ZM5.01703 21H10.017V16H7.01703C5.91246 16 5.01703 16.8954 5.01703 18V21ZM5.01703 21L5.01703 18C5.01703 16.8954 5.91246 16 7.01703 16H10.017V21H5.01703Z" opacity="0.3"/><path d="M11.1903 10.4336L10.2117 13.1113C10.0384 13.5859 9.56282 13.9141 9.07038 13.9141C8.70564 13.9141 8.35876 13.7844 8.08493 13.5352C7.7013 13.1867 7.51862 12.6395 7.61901 12.0911L8.03843 9.80542C6.91583 9.38013 6.13037 8.28345 6.13037 7.01562C6.13037 5.30518 7.52112 3.91406 9.23156 3.91406C10.942 3.91406 12.3328 5.30518 12.3328 7.01562C12.3328 8.16333 11.6938 9.14136 10.7494 9.64502L11.1903 10.4336ZM17.8696 10.4336L16.8911 13.1113C16.7177 13.5859 16.2421 13.9141 15.7497 13.9141C15.385 13.9141 15.0381 13.7844 14.7643 13.5352C14.3807 13.1867 14.198 12.6395 14.2984 12.0911L14.7178 9.80542C13.5952 9.38013 12.8097 8.28345 12.8097 7.01562C12.8097 5.30518 14.2005 3.91406 15.9109 3.91406C17.6214 3.91406 19.0121 5.30518 19.0121 7.01562C19.0121 8.16333 18.3731 9.14136 17.4287 9.64502L17.8696 10.4336Z"/></svg>
                 </div>
-                <p class="text-title-darkbg text-p-lead font-bold leading-relaxed mb-6 italic group-hover:text-emerald-400 transition-colors">
+                <p class="text-title-darkbg text-p-lead font-bold leading-relaxed mb-6 italic group-hover:text-highlight-darkbg transition-colors">
                     "{tech.techQuote}"
                 </p>
-                <div class="h-1 w-20 bg-emerald-500/30 rounded-full"></div>
+                <div class="h-1 w-20 bg-highlight-darkbg/30 rounded-full"></div>
             </div>
           </div>
         </div>

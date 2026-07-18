@@ -44,10 +44,33 @@ El bloque JSON de abajo contiene la configuración visual de la aplicación. **C
      - **Inter** (Limpia, ideal para lectura de textos largos): `'Inter', sans-serif`
      - **Montserrat** (Geométrica, excelente para títulos llamativos): `'Montserrat', sans-serif`
      - **Outfit** (Moderna y redonda): `'Outfit', sans-serif`
-     - **Playfair Display** (Serifa elegante para marcas premium): `'Playfair Display', 3. **Colores (`colors`)**: Se configuran usando códigos hexadecimales estándar (HEX) con el formato `"#RRGGBB"`.
-   - *Ejemplo*: El verde esmeralda es `"#166534"` y el blanco es `"#ffffff"`. Puedes usar cualquier herramienta en línea o editor de código para elegir y copiar tus colores HEX preferidos.
-   - **`text-title`** y **`text-subtitle`**: Colores para texto en fondos claros.
-   - **`text-title-dark-bg`** y **`text-subtitle-dark-bg`**: Colores para texto cuando se superponen a imágenes o fondos oscuros (como en el Hero o el Contacto).
+ 3. **Colores (`colors`)**: Se configuran usando códigos hexadecimales estándar (HEX) con el formato `"#RRGGBB"`. A continuación se detalla qué modifica cada variable en la web:
+
+   | Variable JSON | Tipo de Elemento que Modifica | Descripción |
+   | :--- | :--- | :--- |
+   | `background` | Fondo Principal | Color de fondo general del sitio web (generalmente blanco o claro). |
+   | `foreground` | Texto General | Color de los textos de párrafo estándar y cuerpo de la página. |
+   | `card` | Fondo de Tarjeta | Color de fondo de los bloques (Bento Grid, tarjetas de casos de éxito, etc.). |
+   | `card-foreground`| Texto de Tarjeta | Color del texto que va dentro de las tarjetas y bloques. |
+   | `primary` | Color de Marca Principal | Color de los botones principales, badges superiores, iconos de estado y realces generales en fondos claros. |
+   | `primary-foreground`| Texto sobre Primary | Color del texto que se dibuja sobre fondos con el color `primary` (ej. letras blancas en botones). |
+   | `secondary` | Fondo Secundario | Color de fondo para botones secundarios y secciones auxiliares. |
+   | `secondary-foreground`| Texto Secundario | Color de texto sobre elementos con color secundario. |
+   | `muted` | Elementos Desvanecidos| Color de fondo para estados inactivos o separadores con muy bajo contraste. |
+   | `muted-foreground`| Texto Desvanecido | Color para leyendas secundarias o etiquetas de metadatos. |
+   | `accent` | Acento Interactivo | Color para estados hover, enlaces interactivos y pequeños detalles de marca. |
+   | `accent-foreground`| Texto sobre Acento | Color del texto que va sobre elementos con color `accent`. |
+   | `destructive` | Color de Alerta | Color para indicar errores, alertas o acciones destructivas (ej. rojo). |
+   | `destructive-foreground`| Texto sobre Alerta | Color del texto sobre elementos destructivos. |
+   | `border` | Línea de Borde | Color de los bordes de tarjetas, líneas separadoras y campos de formulario. |
+   | `input` | Entrada de Formularios | Color de fondo de los campos de texto e inputs de formularios. |
+   | `ring` | Anillo de Foco | Color del contorno de accesibilidad al seleccionar botones con el teclado. |
+   | `text-title` | Títulos en Claro | Color de los encabezados principales (H1, H2, H3, H4) sobre fondo blanco. |
+   | `text-subtitle` | Subtítulos en Claro | Color de los textos secundarios y descripciones sobre fondo blanco. |
+   | `text-title-dark-bg`| Títulos en Oscuro | Color de los títulos que van sobre imágenes o fondos oscuros (como en el Hero). |
+   | `text-subtitle-dark-bg`| Subtítulos en Oscuro | Color de los subtítulos que van sobre imágenes o fondos oscuros (como en el Hero). |
+   | `text-highlight-dark-bg`| Resaltado en Oscuro | Color del texto verde/resaltado brillante en títulos que se superponen a vídeos o imágenes (ej. en el banner Hero). |
+
 4. **Bordes Redondeados (`imageRadius` y `radius`)**: Tamaños en unidades CSS como `rem` o `px`.
 5. **headingSizes**: Tamaños específicos para encabezados en móviles (`mobile`) y en pantallas grandes (`desktop`).
 
@@ -81,7 +104,8 @@ El bloque JSON de abajo contiene la configuración visual de la aplicación. **C
     "text-title": "#242f3d",
     "text-subtitle": "#5c6e80",
     "text-title-dark-bg": "#ffffff",
-    "text-subtitle-dark-bg": "#dcdcdc"
+    "text-subtitle-dark-bg": "#dcdcdc",
+    "text-highlight-dark-bg": "#34d399"
   },
   "imageRadius": "2.5rem",
   "headingSizes": {

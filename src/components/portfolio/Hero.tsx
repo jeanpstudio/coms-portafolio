@@ -101,7 +101,7 @@ export default function Hero() {
           {/* 🟢 EDITAR: Título principal de la web */}
           <h1 className={`text-h1 font-extrabold tracking-tight leading-[1.1] ${headingColor}`}>
             Driving Global Narratives{' '}
-            <span className={`${hasMediaBg ? 'text-emerald-400 drop-shadow-sm' : 'text-primary'} relative inline`}>
+            <span className={`${hasMediaBg ? 'text-highlight-darkbg drop-shadow-sm' : 'text-primary'} relative inline`}>
               <span className={`relative z-10 break-words`}>
                 for Ecosystem Restoration & Social Impact
               </span>
@@ -162,7 +162,7 @@ export default function Hero() {
       {/* 🟢 EDITAR: Nombre en los créditos de fotografía / video */}
       {hasMediaBg && (
         <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-20 text-white/60 text-[10px] md:text-xs font-light tracking-widest uppercase flex items-center gap-2 backdrop-blur-sm bg-black/10 px-3 py-1.5 rounded border border-white/10 hover:text-white/90 transition-colors cursor-default">
-          <span className="w-3 h-px bg-emerald-500/80"></span>
+          <span className="w-3 h-px bg-highlight-darkbg/80"></span>
           {bgType === 'video' ? 'Cinematography' : 'Photography'} & Creative Direction by Jean Pierre Salguero
         </div>
       )}

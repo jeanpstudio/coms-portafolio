@@ -23,7 +23,7 @@ const { metrics } = Astro.props;
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {metrics.map((metric) => (
-                <div class="group relative p-10 rounded-img bg-zinc-50 border border-zinc-100 hover:bg-emerald-50/50 hover:border-emerald-100 transition-all duration-700 flex flex-col h-full">
+                <div class="group relative p-10 rounded-img bg-zinc-50 border border-zinc-100 hover:bg-primary/5 hover:border-primary/20 transition-all duration-700 flex flex-col h-full">
                     {/* Header: Value & Label */}
                     <div class="mb-8">
                         <div class="text-5xl md:text-6xl font-black text-primary mb-3 group-hover:scale-110 transition-transform duration-700 origin-left">
@@ -36,7 +36,7 @@ const { metrics } = Astro.props;
                     
                     {/* Description: The story behind the number */}
                     {metric.description && (
-                        <p class="text-p-sm font-medium text-subtitle leading-relaxed mt-auto pt-6 border-t border-zinc-200/60 group-hover:border-emerald-200 transition-colors">
+                        <p class="text-p-sm font-medium text-subtitle leading-relaxed mt-auto pt-6 border-t border-zinc-200/60 group-hover:border-primary/30 transition-colors">
                             {metric.description}
                         </p>
                     )}

@@ -32,6 +32,7 @@
   --color-subtitle: var(--text-subtitle);
   --color-title-darkbg: var(--text-title-dark-bg);
   --color-subtitle-darkbg: var(--text-subtitle-dark-bg);
+  --color-highlight-darkbg: var(--text-highlight-dark-bg);
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
@@ -68,6 +69,7 @@
     --text-subtitle: #5c6e80;
     --text-title-dark-bg: #ffffff;
     --text-subtitle-dark-bg: #dcdcdc;
+    --text-highlight-dark-bg: #34d399;
     --image-radius: 2.5rem;
     --size-h1-mobile: 2.25rem;
     --size-h1-desktop: 4.5rem;
